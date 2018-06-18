@@ -1,0 +1,11 @@
+#container{
+width:900px;
+margin:40px auto;
+
+}
+#container-fluid{
+    margin:48px;
+    width:84%;
+    max-width: 1200px;
+}
+@media screen

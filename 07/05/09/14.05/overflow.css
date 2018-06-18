@@ -1,0 +1,24 @@
+body>div:first-child{
+            width: 225px;
+            height: 150px;
+            background-color:purple;
+            overflow:scroll;
+            
+
+}
+.outer{
+    border: 5px dotted blue;
+    border-radius: 5px;
+    width: 450ps;
+    padding: 10px;
+    margin-bottom: 40px
+
+    
+
+}
+.float{
+    padding: 10px;
+    border: 5px solid green;
+    background-color:yellowgreen;
+    border-radius: 5px;
+}

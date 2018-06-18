@@ -1,0 +1,27 @@
+div.relative{
+
+position: static;
+border: 3px solid black ;
+top:5px;
+height: 300px;
+width: 300px;
+padding: 7px;
+background-color: #444;
+}
+
+h2{
+    display: inline-block;
+    margin-left: 4px;
+    
+
+    
+}
+div.absolute{
+    display: inline-block;
+    border: 3px solid gray;
+    height: 100px;
+    width: 100px;
+    left: 200px;
+    top: 0ox;
+    
+}

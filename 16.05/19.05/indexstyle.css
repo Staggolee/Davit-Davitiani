@@ -1,0 +1,22 @@
+body{
+    color:blue
+}
+h1{color:purple}
+h2.left {text-align:left}
+h2.center{text-align:center}
+h2.right{text-align:right}
+#red{color:red}
+.blue{color:blue !important}
+div {
+    border:12xp, solid, black;
+    
+    height:180px;
+    width:200px;
+    text-align:justify;
+    padding:30px
+
+}
+h2.overline{text-decoration: overline;}
+h2.linethrough {text-decoration: line-through}
+h2.underline{text-decoration: underline}
+p.rtl{direction:rtl}

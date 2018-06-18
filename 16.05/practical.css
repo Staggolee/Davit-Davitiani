@@ -1,0 +1,22 @@
+header,footer {
+    height:50px;
+    width:600px;
+    background-color:blue;
+    text-align: center;
+    margin-left: 10px;
+    margin-top:20px;
+    border:solid 20px purple;
+    text-align: center
+}
+main {
+    height:60px;
+    width:450px;
+    background-color:yellow;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    border:solid darkgoldenrod 50px;
+    text-align: center
+
+}
+ 

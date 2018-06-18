@@ -1,0 +1,19 @@
+div.elements{
+    width:200px;
+    height: 200px;
+    background-color:cornflowerblue;
+    color:#fff;
+    font-size:1.2em;
+    font-weight: 900;
+    text-align:center;
+    line-height:200px
+}
+.elements:hover:before{
+    content:"HTML5";
+    color:green
+}
+.elements:hover:after{
+    content:"JS(ES6)";
+    color:red
+}
+i.fas-fa-user{color:red}

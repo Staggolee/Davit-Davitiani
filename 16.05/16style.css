@@ -1,0 +1,55 @@
+body{
+    /* background-color:#ff0000a4; 
+    /* background-color:rgba(255,0,0, .5,); */
+    /* background-image:url(images/mountains.jpg );
+    background-repeat:no-repeat; */
+    /* background-position:right,top; */
+    /* background-attachment: fixed;  */
+    /* background:#ff0000a4 url(images/bricks.png)no-repeat fixed right top ;
+    background-size: cover; */
+    /* background-clip: } */}
+    /* .box {
+        height:200px;
+        width:200px;
+        background-color: green;
+        font-size:2cm;
+        color:#ff0000a4;
+        text-align: center; */
+        /* line-height: 200px; */
+        /* padding-top:10 0 40px;
+        margin-left:100px; */
+        /* border:5px solid goldenrod; */
+        /* outline:5px solid brown; */
+        /* visibility: hidden */}
+
+        /* p.box--border_style {
+            border:10px dotted #333333;
+            padding:13px;
+            width:80%;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 50px} */
+            
+            #border-box,
+            #padding-box,
+            #content-box
+            {
+                background-color:yellow;
+                width: 225px;
+                padding: 1em 0;
+                border:5px solid rgba (156, 214, 251, .6)
+            }
+            .nomargin { 
+                margin:0;
+            }
+            #order-box{
+                background-clip:padding-box
+            }
+        }
+
+
+
+    }
+
+
+

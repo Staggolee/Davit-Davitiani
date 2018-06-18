@@ -1,0 +1,4 @@
+body {background-color:lightblue }
+#header3 {color:red}
+*{text-align:center}
+p ~ p {font-size:14px; text-align:right}

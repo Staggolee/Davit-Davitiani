@@ -1,0 +1,47 @@
+*{
+    color:red
+}
+h2 {
+    color:blue 
+}
+ li h2 { color:green}  
+ 
+     #myitem {color:yellowgreen}
+     .myitem{color:purple}
+     li.myitem{color:rgba(14, 31, 184, 0.514)}
+     [data-modal="open"]{color:rgba(12, 21, 155, 0.514);
+     background-color:yellow; font-size:24px;
+     padding:17px}
+     ul.menu >li:first-child {font-size:20px; color:blue; display:inline-block;
+     padding:21px}
+     
+     ul.menu >li{display:inline-block;
+        padding:21px}
+
+        ul.menu >li:last-child {font-size:22px; color:darkblue; display:inline-block;
+            padding:21px}
+
+            ul.menu >li:nth-child(3) {display:inline-block;color:darkgrey;
+                padding:21px}
+                ul.menu >li:nth-child(3n+1) {display:inline-block;color:rgb(10, 184, 25);
+                    padding:21px}
+    
+
+/* :empty */
+p ~ p {
+    cursor:pointer;
+    font-size:21px;
+    color:darkorange;
+}
+     
+ #par1 ~ p {
+     color:lightseagreen
+ }
+
+ #par1 ~ p:hover {
+    color:rgb(32, 178, 76);
+    background-color:rgb(0, 0, 255, 0.61)
+}
+#par1 ~ p:active{
+    background-color:rgb(255, 0, 0, 0.5);
+}

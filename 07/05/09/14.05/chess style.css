@@ -1,0 +1,2 @@
+div{background-color:black; display:inline-block; padding:36px; margin: 2px;}
+div:nth-child(2n+1) {display:inline-block; color:white; padding:36px; margin:2px}

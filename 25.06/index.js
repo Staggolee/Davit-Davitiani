@@ -162,5 +162,9 @@ document.body.appendChild(div);
  console.log(menus)
 console.log(menus2)
 
+let menusArray = Array.from(menus);
+
+console.log(menusArray);
+
 
 

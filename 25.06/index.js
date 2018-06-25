@@ -159,12 +159,13 @@ document.body.appendChild(div);
 
  let menus = document.getElementById('menu')
  let menus2 = document.querySelectorAll('.menu')
- console.log(menus)
-console.log(menus2)
+//  console.log(menus)
+// console.log(menus2)
 
 let menusArray = Array.from(menus);
 
-console.log(menusArray);
+//console.log(menusArray);
 
-
+let menuItem = document.querySelector('a');
+console.log(menuItem.matches('#menu'));
 

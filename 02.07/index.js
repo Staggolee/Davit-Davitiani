@@ -63,3 +63,65 @@ let input= document.querySelector('#name');
 // input.value = ""
     
 
+let object = {
+    name: "oho Name",
+    age: 80
+}
+
+//  let {name, age} = object;
+
+ let {name:x, age:y}=object;
+
+// console.log(name, age)
+
+console.log(x, y);
+
+let deepObject ={
+    innerObject: {
+        deep: "deep property",
+        wow: true
+    }
+}
+
+let {innerObject: {deep,wow} } = deepObject;
+// console.log(deep, wow)
+
+let {no} = object;
+// console.log(no)
+
+let num1 = 7, num2 = 13;
+
+[num1, num2] = [num2, num1];
+
+// console.log(num1)
+
+let key = 'name';
+
+let { [key] : myName} = object;
+console.log(myName);
+
+let{def = 8} = {def: 13};
+
+console.log(def);
+
+let [, ,k,l] = [1, 2, 3, 4, 5];
+
+console.log(k,l);
+
+function greet({age, name:greeting="she"}) {
+    console.log(`${greeting} is ${age} years old`);
+}
+
+greet({name:"john", age:22});
+
+greet({age:22});
+
+function getCoords() {
+    return{
+        m:43,
+        n:41
+    }
+}
+let {m, n} = getCoords();
+console.log(m,n)
+

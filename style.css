@@ -16,8 +16,10 @@ color: #fbc531
 
 #davit{
     text-align: center;
-    border: 1px blue dotted;
-    border-width:100px;
+    
+    color: #ff4757;
+    width: 1570px;
+    
     
 }
 

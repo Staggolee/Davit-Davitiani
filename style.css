@@ -8,7 +8,8 @@ text-align: center;
 background-color: #1e90ff;
 border-radius: 15px;
 height: 80px;
-color: #fbc531
+color: #fbc531;
+box-shadow: #1e90ff 1px 1px 4px 1px
 
 
 
@@ -21,6 +22,7 @@ color: #fbc531
     width: 1570px;
     
     
+    
 }
 
 body h2{
@@ -28,9 +30,12 @@ body h2{
     /* border: 1px solid black; */
     width: 150px;
     height: 50px;
-    background-color: lightseagreen;
+    background-color: #1e90ff;
     text-align: center;
     float:right;
+    border: 1px solid #1e90ff;
+    border-radius: 12px;
+    box-shadow: #1e90ff 1px 1px 6px 1px
       
 }
 h2:hover {
@@ -66,6 +71,8 @@ div{
     margin: 5px;
     width: 110px;
     height: 30px;
+    border-radius: 9px;
+    box-shadow: #1e90ff 1px 1px 6px 1px
    
 
 }
@@ -83,5 +90,7 @@ div{
     width: 1530px;
     height: 80px;
     border-radius: 30px;
-    text-align: center
+    text-align: center;
+    box-shadow: #1e90ff 1px 1px 4px 1px;
+    color: #fff
 }

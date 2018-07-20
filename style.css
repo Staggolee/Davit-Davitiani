@@ -1,10 +1,85 @@
 body{
-    background-color: lightgray
-}
-body h1{
-    color: blue;
+    background-color: #fbc531;
     
 }
-h1:hover{
-    color: rgb(1, 185, 16)
+
+#header{
+text-align: center;
+background-color: #1e90ff;
+border-radius: 15px;
+height: 80px;
+color: #fbc531
+
+
+
+}
+
+#davit{
+    text-align: center;
+    border: 1px blue dotted;
+    border-width:100px;
+    
+}
+
+body h2{
+    color: blue;
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 50px;
+    background-color: lightseagreen;
+    text-align: center;
+    float:right;
+      
+}
+h2:hover {
+    color: rgb(1, 185, 16);
+    background-color: #ff4757;
+    
+    
+}
+#HomeWork{
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+
+    
+}
+
+#Classwork{
+    width: 200px;
+    border: 1px solid black;
+    text-align: center
+    
+}
+div{
+    padding: 4px;
+    margin: 15px;
+    float: left;
+}
+
+#Classwork li{
+    list-style: none;
+    border: 1px seagreen dotted;
+    background-color: #4CAF50;
+    margin: 5px;
+    width: 110px;
+    height: 30px;
+   
+
+}
+
+#Classwork li a{
+    color: #1e3799
+}
+
+#Classwork li:hover{
+    background-color: #1e90ff
+}
+
+#footer{
+    background-color: #1e90ff;
+    width: 1530px;
+    height: 80px;
+    border-radius: 30px;
+    text-align: center
 }

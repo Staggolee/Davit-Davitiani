@@ -1,22 +1,22 @@
-var remove = document.querySelector("#remDay");
-var add = document.querySelector("#addDay");
-var update = document.querySelector("#update");
-var struct = document.querySelector(".dayGraphN");
-var visible = struct.innerHTML.replace("dayGraphN","dayGraph");
+let remove = document.querySelector("#remDay");
+let add = document.querySelector("#addDay");
+let update = document.querySelector("#update");
+let struct = document.querySelector(".dayGraphN");
+let visible = struct.innerHTML.replace("dayGraphN","dayGraph");
  
 function createElementFromHTML(htmlString) {
-	var div = document.createElement('div');
+	let div = document.createElement('div');
 	div.innerHTML = htmlString.trim();
   
 	
 	return div.firstChild; 
   }
  
-var ele;
+let ele;
 add.addEventListener('click',function(){
 	
 
-	var elmnt = document.querySelector(".dayGraphN").innerHTML;
+	let elmnt = document.querySelector(".dayGraphN").innerHTML;
 
 	document.querySelector(".container").insertAdjacentHTML('beforeend',"<div class='dayView'>"+elmnt+"</div>");
 	sumStats();
@@ -26,22 +26,19 @@ add.addEventListener('click',function(){
 
 
 remove.addEventListener('click',function(){
-var cc = document.querySelectorAll('.dayView').length;
+let cc = document.querySelectorAll('.dayView').length;
 
 	document.querySelectorAll('.dayView')[cc - 1].remove();
 	sumStats();
 	
 });
-
-
-
-var dayevs;
+let dayevs;
 function eves(){
 
-var evs = document.querySelectorAll(".inp");
+let evs = document.querySelectorAll(".inp");
 
-var handler = function() {
-	var pt = prompt("Enter Point", "");
+let handler = function() {
+	let pt = prompt("Enter Point", "");
 
 	if(pt == 0){
 		this.setAttribute("id", "missed");	
@@ -75,9 +72,9 @@ var handler = function() {
 }
 
 function sumStats(){
-	var totday = document.querySelectorAll('.dayView').length;
+	let totday = document.querySelectorAll('.dayView').length;
 	document.querySelector('#tot').innerHTML = totday;
 
-	var missed = document.querySelectorAll("#missed").length;
+	let missed = document.querySelectorAll("#missed").length;
 	document.querySelector('#missedless').innerHTML = missed;
 }

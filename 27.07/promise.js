@@ -36,4 +36,9 @@ doAsync().then(function(){
 
 })
 
+//promise.resolve()
+//promise.reject()
+//promise.all(iterables)   // masivi sheidzleb gadaeces; ramdenime paralelur rejimshi da ara tanmimd.
+//promise.race(iterables)  // pirveli romelic morcha imas gamoitans
+
 

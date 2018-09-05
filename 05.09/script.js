@@ -74,8 +74,6 @@ list.add(1)
 list.add(13)
 list.add(16)
 list.add(20)
-list.add(24)
-list.add(27)
 console.log(`list.length - ${list.length()}`)
 
 

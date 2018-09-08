@@ -95,12 +95,12 @@ class Set {                                                 //set :  add(el)/has
         this.elements = [];
     }
 
-    add(el){
-       if(!this.has(el)
-        this.elements.push(el);
-        return true;
+    // add(el){
+    //    if(!this.has(el)
+    //     this.elements.push(el);
+    //     return true;
        
-    }
+    // }
 
     has(){
         return this.tasks.shift();

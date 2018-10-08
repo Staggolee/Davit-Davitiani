@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+            body{
+                background-color: #b8e994;
+
+            }
+
+
+            canvas{
+                background-color: green;
+            }
+            div{
+                margin: 5px;
+                padding: 10px;
+                float: right;
+                display: block;
+                background-color: black;
+                height: 50px;
+                width: 200px;
+                border: 1px solid black;
+                color: red;
+                font-size: 25px;
+                
+            }
+            div:hover{
+                background-color: green;
+                box-shadow: 1px 1px 1px 2px ;
+                
+            }
+
+            button{
+                display: inline-block;
+                padding: 6px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.42857143;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                color: red;
+                background-color: #5cb85c;
+                border-color: #4cae4c;
+            }
+           
+            
+            
+
+        </style>
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="canvas" height="354" width="450"> 
+            </canvas>
+
+            <div id="score">
+            </div>
+
+            <button onclick="lvlUP(5)">Speed Up </button>
+
+    
+
+    
+        
+        
+    <!-- <script src="snakeTest.js"></script> -->
+    <script src="script.js"></script>
+</body>
+</html>

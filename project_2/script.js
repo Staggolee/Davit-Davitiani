@@ -6,6 +6,13 @@ const ctx = cvs.getContext("2d");
 // create the unit
 const box = 32;
 
+
+
+let game; 
+let speed; 
+
+let globalScore;
+
 // load images
 
 const ground = new Image();
@@ -40,6 +47,10 @@ let apple = {
 // create the score var
 
 let score = 0;
+
+//create level var
+
+let level = 0;
 
 //control the snake
 
@@ -77,6 +88,8 @@ function collision(head,array){
 // draw everything to the canvas
 
 function draw(){
+	
+	document.getElementById("score").innerHTML = "<span style=''>High Score</span>: <span style='font-weight:bold;'>"+localStorage.HighScore+"</span>";
     
      ctx.drawImage(ground,0,0);
     
@@ -105,6 +118,26 @@ function draw(){
     // if the snake eats the apple
     if(snakeX == apple.x && snakeY == apple.y){
         score+=10;
+		
+		
+		
+		
+		switch (score){
+			
+			case 50:
+			lvlUP(2);
+			break;
+			
+			case 100:
+			lvlUP(3);
+			break;
+			
+			case 150:
+			lvlUP(4);
+			break;
+		}
+		
+		
         apple = {
             x : Math.floor(Math.random()*14+0) * box,
             y : Math.floor(Math.random()*10+1) * box
@@ -123,16 +156,22 @@ function draw(){
     }
     
     // game over
+	
+	
+	if(score > localStorage.HighScore){
+		localStorage.HighScore = score;
+		} 
+		
+		
     
      if(snakeX < 0 || snakeX > 13 * box || snakeY < 1*box || snakeY > 10*box || collision(newHead,snake)){
+		
         clearInterval(game);
-        alert("Game Over!");
-        let myScore = JSON.stringify(score);
-        localStorage.setItem("HighScore", myScore);
-        let result = JSON.stringify(localStorage.getItem("HighScore"));
-        let curr = document.getElementById("score").innerHTML = "Your High Score" + "" + result;
+      
+        let curr = document.getElementById("score").innerHTML = "Your High Score" + "" +localStorage.HighScore ;
        
-
+		
+		
         
 
         
@@ -150,8 +189,14 @@ function draw(){
     snake.unshift(newHead);
     
     ctx.fillStyle = "red";
-    ctx.font = "40px Changa one";
-    ctx.fillText(score,1*box,1*box);
+    ctx.font = "20px Changa one";
+    ctx.fillText("Score: "+score,1*box,1*box);
+	
+	ctx.fillStyle = "red";
+    ctx.font = "20px Changa one";
+    
+    ctx.fillText("Level: "+level, 4*box,1*box);
+	
 
     
 
@@ -159,11 +204,38 @@ function draw(){
 
     
             };
+			
+			
+			
+let lvlSPEED;
+function lvlUP(lvl){
+	
+	
+	upSpeed = 25;
+	begining = 200;
+	 
+	
+		if(typeof(game) != "undefined"){
+			clearInterval(game);
+			lvlSPEED = lvlSPEED - (25 * 2);
+			
+		}else{
+			lvlSPEED = begining;
+			
+		}
+		
+			level=lvl;			
+			
+			console.log(lvlSPEED);
+			game = setInterval(draw, lvlSPEED);
+	
+	
+}
 
             
-let speed = 180;
 
-let game = setInterval(draw, speed)
+
+lvlUP(1);
 
 
 

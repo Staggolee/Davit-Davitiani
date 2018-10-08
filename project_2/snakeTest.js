@@ -1,130 +1,170 @@
-const cvs = document.getElementById("canvas");
-const ctx = cvs.getContext("2d");
+ const cvs = document.getElementById("canvas");
+ const ctx = cvs.getContext("2d");
 
-// create the unit
-const box = 32;
+// // create the unit
+// const box = 32;
 
-// create score
+// // create score
 
-let score = 0;
+// let score = 0;
 
-// load images
+// // load images
 
-const ground = new Image();
-ground.src = "img/unnamed.png";
+// const ground = new Image();
+// ground.src = "img/unnamed.png";
 
-const appleImg = new Image();
-appleImg.src = "img/food.png";
+// const appleImg = new Image();
+// appleImg.src = "img/food.png";
+
+class Snake {
+    constructor(box, score){
+        this.box = 32;
+        this.apple = apple;
+        this.score = score;
+        this.ground = new Image();
+        this.ground.src = "img/unnamed.png";
+        this.snake = [];
+    }
+
+    snakeConst(){
 
 
-function Snake(){
-    let snake
-    this.snake = [0];
-    
-        this.x = 9 * box;
-        this.y = 10* box;
-    
-}
-
-function Apple(){
-    
-    this.x = Math.floor(Math.random()*14+0) * box;
-    this.y = Math.floor(Math.random()*10+1) * box;
-
+    this.snake[0] = {
+    x : 9 * this.box,
+    y : 10 * this.box
 };
 
-function Direction(){
-    document.addEventListener('keydown', direction);
+    };
+
+    apple(){
+       this.apple = {
+        x : Math.floor(Math.random()*14+0) * this.box,
+        y : Math.floor(Math.random()*10+1) * this.box
+       }
+
+    };
+
+    // ground(){
+    //     new Image();
+    // ground.src = "img/unnamed.png";
+    // };
+
+    // appleImg(){
+    //     new Image();
+    // appleImg.src = "img/food.png";
+    // };
+
+    control(){
+        let d;
+
+    document.addEventListener("keydown",direction);
     function direction(event){
         let key = event.keyCode;
-    if( key == 37 && d != "RIGHT"){
-    
-        d = "LEFT";
-    }else if(key == 38 && d != "DOWN"){
-        d = "UP";
+        if( key == 37 && d != "RIGHT"){
         
-    }else if(key == 39 && d != "LEFT"){
-        d = "RIGHT";
-        
-    }else if(key == 40 && d != "UP"){
-        d = "DOWN";
-        
-    }
-}
-    
-};
-
-function Collision(head, array){
-    for(let i = 0; i < array.length; i++){
-        if(head.x == array[i].x && head.y == array[i].y){
-            return true;
+            d = "LEFT";
+        }else if(key == 38 && d != "DOWN"){
+            d = "UP";
+            
+        }else if(key == 39 && d != "LEFT"){
+            d = "RIGHT";
+            
+        }else if(key == 40 && d != "UP"){
+            d = "DOWN";
+            
         }
+    };
+
+    };
+
+    checkGame(){
+        function collision(head, array){
+            for(let i = 0; i < array.length; i++){
+                if(head.x == array[i].x && head.y == array[i].y){
+                    return true;
+                }
+                
+        }
+        return false;
     }
-    return false;
-};
+    };
 
-function draw(){
+    drawAll(){
+        ctx.drawImage(this.ground,0,0);
     
-    ctx.drawImage(ground,0,0);
-   
-   for( let i = 0; i < this.snake.length ; i++){
-       ctx.fillStyle = ( i == 0 )? "green" : "red";
-       ctx.fillRect(snake[i].x,snake[i].y,box,box);
+    for( let i = 0; i < snake.length ; i++){
+        ctx.fillStyle = ( i == 0 )? "green" : "red";
+        ctx.fillRect(snake[i].x,snake[i].y,box,box);
+        
+        
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(snake[i].x,snake[i].y,box,box);
+        
+    }
+    
+    ctx.drawImage(appleImg, apple.x, apple.y);
+    
+    // old head position
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
+    
+    // which direction
+    if( d == "LEFT") snakeX -= box;
+    if( d == "UP") snakeY -= box;
+    if( d == "RIGHT") snakeX += box;
+    if( d == "DOWN") snakeY += box;
+    
+    // if the snake eats the apple
+    if(snakeX == apple.x && snakeY == apple.y){
+        score+=10;
+        apple = {
+            x : Math.floor(Math.random()*14+0) * box,
+            y : Math.floor(Math.random()*10+1) * box
+        }
+        // don't remove the tail
+    }else{
+        // remove the tail
+        snake.pop();
+    }
+    
+    // add new Head
+    
+    let newHead = {
+        x : snakeX,
+        y : snakeY
+    }
+    
+    // game over
+    
+     if(snakeX < 0 || snakeX > 13 * box || snakeY < 1*box || snakeY > 10*box || collision(newHead,snake)){
+        clearInterval(game);
+        alert("Game Over!");
+        let myScore = JSON.stringify(score);
+        localStorage.setItem("HighScore", myScore);
+        let result = JSON.stringify(localStorage.getItem("HighScore"));
+        let curr = document.getElementById("score").innerHTML = "Your High Score" + "" + result;
        
+
+        
+
+        
        
-       ctx.strokeStyle = "blue";
-       ctx.strokeRect(snake[i].x,snake[i].y,box,box);
+
+
+        
        
-   };
-   
-   ctx.drawImage(appleImg, apple.x, apple.y);
+        
+           
+    
+    
+    }
+    
+    snake.unshift(newHead);
+    
+    ctx.fillStyle = "red";
+    ctx.font = "40px Changa one";
+    ctx.fillText(score,1*box,1*box);
+    };
+        
 
-   // old head position
-   let snakeX = snake[0].x;
-   let snakeY = snake[0].y;
-   
-   // which direction
-   if( d == "LEFT") snakeX -= box;
-   if( d == "UP") snakeY -= box;
-   if( d == "RIGHT") snakeX += box;
-   if( d == "DOWN") snakeY += box;
-   
-   // if the snake eats the apple
-   if(snakeX == apple.x && snakeY == apple.y){
-       score+=10;
-       apple = {
-           x : Math.floor(Math.random()*14+0) * box,
-           y : Math.floor(Math.random()*10+1) * box
-       }
-       // don't remove the tail
-   }else{
-       // remove the tail
-       snake.pop();
-   }
-   
-   // add new Head
-   
-   let newHead = {
-       x : snakeX,
-       y : snakeY
-   }
-   
-   // game over
-   
-    if(snakeX < 0 || snakeX > 13 * box || snakeY < 1*box || snakeY > 10*box || collision(newHead,snake)){
-       clearInterval(game);
-   
-   } 
-   
-   snake.unshift(newHead);
-   
-   ctx.fillStyle = "red";
-   ctx.font = "40px Changa one";
-   ctx.fillText(score,1*box,1*box);
-
-   
-};
-
-let speed = 180;
-
-let game = setInterval(draw,speed);
+}

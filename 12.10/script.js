@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
     res.write(`username - ${req.cookies.username} <h1>`);
     res.write(`forever - ${req.cookie.forever} <h1>`);
     res.end();
-})
+});
 

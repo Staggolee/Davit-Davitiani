@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.first {
+  height: 150px;
+  width: 22.7%;
+  border: 1px solid black;
+  float: left;
+}
+.second {
+  height: 150px;
+  border: 1px solid black;
+  float: left;
+  width: 54.1%;
+}
+
+
+.third {
+  height: 150px;
+  width: 22.7%;
+  border: 1px solid black;
+  float: left;
+}
+.forth {
+  height: 300px;
+  width: 22.7%;
+  border: 1px solid black;
+  float: left;
+}
+.fifth {
+  height: 300px;
+  border: 1px solid black;
+  float: left;
+  width: 54.1%;
+}
+
+
+.sixth {
+  height: 300px;
+  width: 22.7%;
+  border: 1px solid black;
+  float: left;
+}
+
+
+.clearfix {
+  clear: both;
+}
+
+.seventh {
+  height: 200px;
+}

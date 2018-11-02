@@ -1,0 +1,78 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 100px;
+}
+
+div {
+  border: 2px solid black;
+}
+
+.result {
+  height: 50px;
+  width: 50px;
+}
+
+.resultWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.showBtn {
+  border: 3px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: aqua
+}
+
+.a1 {
+  background-color: yellow;
+}
+.a2 {
+  background: green;
+}
+.a3 {
+  background: blue;
+}
+.a4 {
+  background: red;
+}
+.a5 {
+  background: skyblue;
+}
+.a6 {
+  background: orange;
+}
+.a7 {
+  background: azure;
+}
+.a8 {
+  background: brown;
+}
+.a9 {
+  background: yellowgreen;
+}
+.a10 {
+  background: purple;
+}
+.a11 {
+  background: seagreen;
+}
+.a12 {
+  background: grey;
+}
+.a13 {
+  background: red;
+}
+.a14 {
+  background: pink;
+}
+.a15 {
+  background: brown;
+}

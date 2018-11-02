@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+.first {
+  height: 250px;
+  border: 1px solid black;
+}
+
+.second {
+  height: 400px;
+  border: 1px solid black;
+  width: 33.1%;
+  float: left;
+}
+
+.third {
+  height: 400px;
+  border: 1px solid black;
+  float: left;
+  width: 33.1%;
+}
+
+.forth {
+  height: 400px;
+  border: 1px solid black;
+  float: left;
+  width: 33.1%;
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.first {
+  height: 500px;
+  width: 22.7%;
+  border: 1px solid black;
+  float: left;
+}
+.second {
+  float: right;
+  border: 1px solid black;
+  width: 77.3%;
+  height: 180px;
+
+}
+
+
+.third {
+
+  border: 1px solid black;
+  float: left;
+  height: 320px;
+  width: 54.1%;
+
+}
+
+.forth {
+
+  border: 1px solid black;
+  float: left;
+  height: 320px;
+  width: 22.7%;
+
+}
+
+
+
+
+.clearfix {
+  clear: both;
+}
+
+.fifth {
+  height: 200px;
+} 

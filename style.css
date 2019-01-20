@@ -1,11 +1,11 @@
 body{
-    background-color: #fbc531;
+    background-color: whitesmoke
     
 }
 
 #header{
 text-align: center;
-background-color: #1e90ff;
+background-color: black;
 border-radius: 30px;
 height: 80px;
 color: #fbc531;
@@ -94,7 +94,7 @@ div{
 }
 
 #footer{
-    background-color: #1e90ff;
+    background-color: black;
     width: 1530px;
     height: 80px;
     border-radius: 30px;

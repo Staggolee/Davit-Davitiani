@@ -1,0 +1,48 @@
+@import 'normalize';
+
+$font-family: 'Courier New', Courier, monospace;
+$font-size: 2em;
+$titleParent: info;
+
+
+html, body{
+    width: 100%
+}
+.title {
+    color: orange;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    border: {
+        left: 10px solid black;
+        right: 5px solid red;
+        bottom: 3px dotted purple;
+        top: 6px dashed purple;
+    }
+
+    @media screen and(min-width:960px){
+        background-color: #ddd;
+    }
+
+    span{
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: orangered;
+        cursor: pointer;
+        font: $font-size $font-family;
+        
+    }
+
+    &:hover span {
+        color: blue;
+    }
+
+    .#{$titleParent} > & {
+        font-family: $font-family;
+        height: 250px - 100px;
+    }
+}
+
